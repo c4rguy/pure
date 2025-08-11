@@ -41,6 +41,8 @@ body{
   background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
   border: 1px solid rgba(255,255,255,0.03);
   backdrop-filter: blur(4px);
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  gap: 15px;
 }
 
 .service-name{
@@ -75,6 +77,34 @@ body{
   background: var(--discord);
   color: #fff;
   border-color: rgba(255,255,255,0.05);
+}
+
+/* Search Bar */
+.search-container {
+  flex-grow: 1; /* Allows the search bar to take up available space */
+  min-width: 250px; /* Minimum width before wrapping */
+}
+
+#searchInput {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: var(--glass);
+  color: #eee;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+#searchInput:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#searchInput::placeholder {
+  color: var(--muted);
 }
 
 /* Loading */
@@ -162,13 +192,35 @@ body{
   margin-left: 8px;
 }
 
-/* Meta info below title */
-.card .meta{
-  color:var(--muted);
-  font-size:0.9rem;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
+/* References Section in Card */
+.references {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.references-title {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.ref-link {
+  font-size: 0.85rem;
+  color: #8ab4f8; /* A nice blue for links */
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s;
+}
+
+.ref-link:hover {
+  color: #a7c5f9;
+  text-decoration: underline;
 }
 
 /* Badges */
@@ -176,6 +228,8 @@ body{
   display:flex;
   gap:8px;
   flex-wrap:wrap;
+  margin-top: auto; /* Pushes badges to the bottom of the card */
+  padding-top: 8px;
 }
 
 .badge{
@@ -202,6 +256,13 @@ body{
 }
 
 /* responsive */
+@media (max-width:768px){ /* Adjust breakpoint for search bar */
+  .top-bar{
+    flex-direction:column;
+    align-items:stretch; /* Stretch items to full width */
+  }
+}
+
 @media (max-width:520px){
   .top-bar{flex-direction:column; align-items:flex-start; gap:10px;}
   .buttons{width:100%; justify-content:flex-start;}
