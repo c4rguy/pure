@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RBDB - Blacklist Database</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <div class="service-name">
+        rbdb
+        <p class="made-by">made with ❤️ by @shall0e</p>
+      </div>
+
+      <div class="buttons">
+        <a class="btn api-btn" href="https://api.rbdb.xyz" target="_blank" rel="noopener">API</a>
+        <a class="btn discord-btn" href="https://rbdb.xyz/discord" target="_blank" rel="noopener">Discord Server</a>
+      </div>
+    </div>
+
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading database...</p>
+    </div>
+
+    <div id="cardsContainer" class="cards-container" aria-live="polite"></div>
+
+    <div id="errorMessage" class="error-message" hidden>
+      <p>Failed to load database. Please try again later.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
