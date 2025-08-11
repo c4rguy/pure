@@ -229,7 +229,7 @@ export const DATABASE = { // Added 'export' keyword
       ],
       
       created: "2025-03-27",
-      verified: false
+      verified: true
     },
     
     {
