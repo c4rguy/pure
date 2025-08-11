@@ -1,35 +1,32 @@
-// RBDB - Blacklist Database
-// Easy to maintain format - just add new entries to the users array
-
-export const DATABASE = { // Added 'export' keyword
+export const DATABASE = { 
   version: "2.0.0",
   lastUpdated: "2025-08-11",
   totalUsers: 19,
   
-  // User database - easy format for adding new entries
+  
   users: [
     {
-      // Basic Info
+      
       nickname: "Astroghost",
       username: "@astroghxst",
       id: "1208128286471880807",
       avatar: "https://cdn.discordapp.com/avatars/1208128286471880807/79faafe4a8f33b6fa07d6079adfdcffc",
       
-      // Classification
-      tags: ["Malware", "Paster", "Fraud", "Staff"],
-      severity: "high", // high, medium, low
       
-      // Details
+      tags: ["Malware", "Paster", "Fraud", "Staff"],
+      severity: "high", 
+      
+      
       note: "Ex-Manager of Ronix, nuked Pulsery. Known for destructive behavior and malicious activities within the executor community.",
       
-      // Evidence
+      
       references: [
         "https://v3rm.net/threads/cw-astroghost-aka-nuker-predator-scammer-ratter.21469/",
         "https://v3rm.net/threads/cw-about-astroghost-getting-paid-by-setinstance-then-nuked-nexora.22007/",
         "https://www.youtube.com/watch?v=zUShmzrj9p8"
       ],
       
-      // Metadata
+      
       created: "2024-02-16",
       verified: true
     },
@@ -200,7 +197,7 @@ export const DATABASE = { // Added 'export' keyword
       avatar: "https://cdn.discordapp.com/avatars/709238641372823564/d09b7b2d2cdae12f4ef58e4fc34f2cf8",
       
       tags: ["Malware", "Alt-Hopping"],
-      severity: "critical", // New severity level for extreme cases
+      severity: "critical", 
       
       note: "Serious community threat. Known predator and ratter with substance abuse issues. Poses significant danger to community members.",
       
@@ -375,12 +372,77 @@ export const DATABASE = { // Added 'export' keyword
       tags: ["Fraud", "Exitscam", "Owner"],
       severity: "medium",
       
-      note: "Ex-owner of multiple questionable executors. Left exploiting scene to create malicious anti-cheat scripts targeting legitimate users.",
+      note: "Ex-owner of multiple questionable executors. Left exploiting scene to create malicious anti-cheat scripts targeting legitimate users then came back and made Honeypot scripts and sold user data to Game Developers.",
       
       references: [],
       
       created: "2022-05-25",
       verified: false
+    },
+
+    {
+      nickname: "duckss",
+      username: "@.theonlyducks",
+      id: "713005942345826315",
+      avatar: "https://cdn.discordapp.com/avatars/713005942345826315/14b9863182bab2c5a4cf6422230d87ff",
+      
+      tags: ["Legit", "ProDev", "Owner"],
+      severity: "low",
+      
+      note: "A very reputable and respectable person within the community, has vast knowledge of Modules and is a developer for big executors such as: Vanity and Bunni, However he also has participated in executors such as Wind/Atlantis which rebranded and have had scandels of honeypotting scripts and a low reputation due to previous acts under the Atlantis name carried out by LXZP/Yoru.",
+      
+      references: [],
+      
+      created: "2025-05-25",
+      verified: true
+    },
+    {
+      nickname: "syringee",
+      username: "@hungrymongey",
+      id: "1314553754510688338",
+      avatar: "https://cdn.discordapp.com/avatars/1314553754510688338/e8d34bef95cecda7165e895bf4c7dcf5",
+      
+      tags: ["Fraud", "Asshole", "Paster", "Alt-Hopping"],
+      severity: "high",
+      
+      note: "A paster/skid developer who has scammed MANY people.",
+      
+      references: [],
+      
+      created: "2025-05-25",
+      verified: false
+    },
+    {
+      nickname: "Forlornicus",
+      username: "@forlornicus",
+      id: "1254595512242405489",
+      avatar: "https://cdn.discordapp.com/avatars/1254595512242405489/ea2f0300b65adc0a250a042c89f9900c",
+      
+      tags: ["Legit", "ProDev" ],
+      severity: "low",
+      
+      note: "A very reputable and respectable person within the community, has vast knowledge of Modules and is a good developer and also developed Vanity and the current best Base, Forlornware. Has been allegations of pasting by the sUNC discord server and in particular Savage however these allegations seem unfounded.",
+      
+      references: [],
+      
+      created: "2025-08-11",
+      verified: true
+    },
+    {
+      nickname: "Savage",
+      username: "@savagealt3881",
+      id: "1205252395970601020",
+      avatar: "https://cdn.discordapp.com/avatars/1205252395970601020/ae1109ae8390d6d2d950a32b0642fc86.webp?size=4096",
+      
+      tags: ["Staff", "Fraud", "Legit", "ProDev"],
+      severity: "high",
+      
+      note: "A highly known person within the community, VERY CONFUSING HISTORY AND FELL IN WITH THE WRONG CROWD has a lot of knowledge and is a certifier at Pulsery and is an expert in reversing exploits, he has however had a past of pasting which has been confirmed by many and has ties to LXZP/Yoru and has nuked servers and scammed and participated in Arcadia/Atlantis raids and also said he was going to 'nuke velocity'. However! Savage was actually not as involved as people think, extra contect was added by Essence owners: 'Id like to clarify that savage wasn't really apart of Lunas raid, he was asleep and came back online after it finished. I'd also like to mention just yesterday he informed me that he was sorry had no idea I was scammed out of money THEN raided and that he plans to stop hanging out with lxzp. Ty' so Savage was mostly cleared of any wrong doing, his pasting seems relevent though and there is proof of it but I still think hes a good dev personally.",
+      
+      references: ["https://v3rm.net/threads/cw-lxzp-yoru-savage-dtbu-skidding-ratting-raiding.17437/", "https://v3rm.net/threads/savage-his-ego-ultimate-cw.19131/", "https://v3rm.net/threads/cw-arcadia-nova-savage-yoru.15530/"],
+      
+      created: "2025-08-11",
+      verified: true
     }
   ],
   
@@ -394,14 +456,16 @@ export const DATABASE = { // Added 'export' keyword
     "Exitscam": "Has performed exit scams, taking money and disappearing",
     "Alt-Hopping": "Uses multiple accounts/aliases to evade bans or detection",
     "Asshole": "Generally toxic behavior, harassment, or poor community conduct",
-    "Inactive": "No longer active in the scene but left negative impact"
+    "Inactive": "No longer active in the scene but left negative impact",
+    "Legit": "Legit user in the exploit scene, trusted and reputable.",
+    "ProDev": "A legit developer who does not paste or skid"
   },
   
-  // Severity levels
+  
   severityLevels: {
     "critical": "Extreme threat - avoid at all costs",
     "high": "Major threat - exercise extreme caution", 
     "medium": "Moderate threat - be cautious",
-    "low": "Minor threat - be aware"
+    "low": "Minor threat - no harm"
   }
 };
